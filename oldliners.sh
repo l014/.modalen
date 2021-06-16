@@ -1,6 +1,7 @@
 # public db dumps; dbpath='~/Disks/disk.d/dbdumps/'
 ssh lola@modalen.pub 'egrep -rian $1 $dbpath/*'
-
+# backup to disk raid.mirror
+rsync -vv -avz -e "ssh -p 2222" something  ivan@modalen.bak:~/Disks/backup.mirror/
 # reminder - run stuff against alive
 while read u; do echo $u; python3 ~/zauTo.py  $u | tee -a zfuzz.log;done<alive.txt
 while read u; do python3.9 ParamSpider/paramspider.py -d $u -o spider.out | tee -a outest; ~/go/bin/./dalfox file output/spider.out --output ./dalfox-out --format PLAIN | tee -a dalfox.stdout.log;done<alive.txt
