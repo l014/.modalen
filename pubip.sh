@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 	display public ipv4/ipv6 using curl & egrep. ovpn.com & mullvad.net to resolve ip(s). ~ imo trust in your VPN provider is crusial 
-#	 the regxp should work on other domains \_(O-o)_/ - output looks ok using; ser="https://ipnr.nu/ https://www.dnsleaktest.com/ https://ip.me/"
+# 	display public ipv4/ipv6 using curl & egrep - ovpn.com & mullvad.net to resolve ip(s). ~ trust in your VPN provider is crucial 
+#	  the regxp should work on other domains \_(O-o)_/ - output looks ok using; ser="https://ipnr.nu/ https://www.dnsleaktest.com/ https://ip.me/"
 
 ser="https://ovpn.com/ https://ipv4.am.i.mullvad.net/ https://ipv6.am.i.mullvad.net/"  
 echo "using : "$ser;
